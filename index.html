@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" async class="remove"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22105%22>🪽</text></svg>">
+    <title>Web Infrastructure Search Endowment (WISE)</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@robinberjon">
+    <meta name="twitter:creator" content="@robinberjon">
+    <meta name="twitter:title" property="og:title" content="Web Infrastructure Search Endowment (WISE)">
+    <meta name="twitter:description" property="og:description" content="Standardizing browser & search public infrastructure.">
+    <meta name="twitter:image" property="og:image" content="https://darobin.github.io/wise/wise-wing.jpg">
+    <meta name="twitter:image:alt" content="A cute puppy face drawing">
+    <meta name="twitter:url" property="og:url" content="https://darobin.github.io/wise/">
+    <meta property="og:locale" content="en">
+    <style>
+      body {
+        background: none !important;
+      }
+    </style>
+    <script class="remove">
+      var respecConfig = {
+        specStatus: 'unofficial',
+        postProcess: [(config, doc) => {
+          const time = doc.querySelector('#w3c-state time');
+          const h2 = doc.querySelector('#w3c-state');
+          h2.innerHTML = 'Proposal ';
+          h2.appendChild(time);
+          const dl = doc.querySelector('details > dl');
+          dl.firstElementChild?.remove();
+          dl.firstElementChild?.remove();
+        }],
+        editors: [{
+          name: 'Robin Berjon',
+          url: 'https://berjon.com/',
+        }],
+        github: {
+          repoURL: 'https://github.com/darobin/wise',
+          branch: 'main',
+        },
+        edDraftURI: 'https://darobin.github.io/wise/',
+        shortName: 'wise',
+        localBiblio: {
+          'FIDUCIARY-UA': {
+            title: 'The Fiduciary Duties of User Agents',
+            href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3827421',
+            authors: ['Robin Berjon'],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section id="abstract">
+      <p>
+        Browsers, and the browser engines that power them, provide critical public infrastructure to over five
+        billion people. To cover the high cost of maintaining such complex feats of engineering, browser 
+        vendors and search engine providers have improvised a system in which money is levied from search 
+        revenue and distributed to browsers. Over the years, this ad hoc system has succeeded in providing some
+        funding to browsers but it suffers from a muddled lack of transparency and has known detrimental effects
+        on funding attribution, concentration, search quality, privacy, misinformation, publisher revenue, and 
+        opinion pluralism. This specification captures the web community's experience with the current system so 
+        as to refine requirements and formalizes a browser/search levy that improves on the current one and 
+        addresses its shortcomings.
+      </p>
+    </section>
+    <section id="sotd"></section>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        tk
+      </p>
+    </section>
+  </body>
+</html>
