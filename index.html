@@ -47,10 +47,21 @@
             href: 'https://www.theverge.com/2023/10/27/23934961/google-antitrust-trial-defaults-search-deal-26-3-billion',
             authors: ['David Pierce'],
           },
+          AMP: {
+            title: 'Accelerated Mobile Pages',
+            href: 'https://amp.dev/',
+            authors: ['Google'],
+            status: 'Proprietary Format',
+          },
           'Apple-36': {
             title: 'Apple Gets 36% of Google Revenue in Search Deal, Expert Says',
             href: 'https://www.bloomberg.com/news/articles/2023-11-13/apple-gets-36-of-google-revenue-from-search-deal-witness-says',
             authors: ['Leah Nylen'],
+          },
+          'Bad-Search': {
+            title: 'How bad are search results?',
+            href: 'https://danluu.com/seo-spam/',
+            authors: ['Dan Luu'],
           },
           'Fiduciary-UA': {
             title: 'The Fiduciary Duties of User Agents',
@@ -66,6 +77,11 @@
             title: 'Mozilla expects to generate more than $500M in revenue this year',
             href: 'https://techcrunch.com/2021/12/13/mozilla-expects-to-generate-more-than-500m-in-revenue-this-year/',
             authors: ['Frederic Lardinois'],
+          },
+          'Perfect-Webpage': {
+            title: 'The Perfect Webpage',
+            href: 'https://www.theverge.com/c/23998379/google-search-seo-algorithm-webpage-optimization',
+            authors: ['Mia Sato'],
           },
           'Where-Browsers': {
             title: 'Where Browsers Come From',
@@ -161,33 +177,131 @@
         of our knowledge, the situation has not significantly evolved since.</span>
       </p>
       <section>
-        <h2>Known Issues</h2>
+        <h2>Reviewing the AHLD</h2>
         <p>
-          this levy is good but it has issues
-          one concern is that, if we don't address the issues, we will lose the levy and that will make it very hard to pay for browsers
-          we need to act
-          unfortunately limited transparency, despite being the beating heart of web infrastructure -> issues
-          tk
+          The [=AHLD=] levy was an excellent invention and remains a great idea twenty years on. Taking a system view of 
+          the web, search is indeed one of the logical places at which to apply a levy. Search extracts value from 
+          content and behavior on the web (it would have no value otherwise) and renders it available at a functional 
+          choke point (it is one of the required components of web discovery). In turn, the value of web content is 
+          only possible because browsers provide critical infrastructure services that render that content available and
+          attractive to people, and for the most part safe. In an idealized view, we can envision a virtuous, regenerative 
+          cycle: the search levy finances core web infrastructure and that core web infrastructure makes the web successful
+          such that search engines enjoy strong businesses that can be levied from.
+        </p>
+        <p>
+          Unfortunately, the [=AHLD=] levy has failed to evolve as the web grew from a time of relative infancy when only 
+          14% of the world population (fewer than a billion, [[?Internet-Users]]) used the Internet to the essential
+          part of society that it is today. Over time, serious shortcomings with this ad hoc approach have surfaced
+          that have not been addressed. It is incumbent on the web community to step up and hammer out an agreement for 
+          a better levy, as well as to commit to maintaining it so as to avoid the accumulation of problems ([[rfc9413]]).
+          The changes need not be revolutionary since the core principle — a levy on search to pay for web infrastructure — 
+          can readily remain the same. However, as pressure mounts to address the problems caused by an unmaintained, ad hoc 
+          system, if we fail to act we may lose the levy altogether. Should that happen, the web will suffer from the impact 
+          on its infrastructure and we may find it very difficult to maintain a high-quality browser engine, let alone a 
+          diverse set of them.
+        </p>
+        <p>
+          The rest of this section captures the shortcomings of the [=AHLD=] levy.
+        </p>
+        <p>
+          Search is a key architectural component of the web, browsers provide critical infrastructure, but unfortunately
+          there is <strong>no transparency</strong> into the system. Almost everything that the web community knows about 
+          [=AHLD=] we know thanks to material released via court cases. If we are to take seriously the W3C's goals of 
+          building a web for all humankind, we need to ensure that the web community is able to evaluate how the beating 
+          heart of web infrastructure operates.
+        </p>
+        <p>
+          There is also <strong>no accountability</strong> concerning the bilateral ad hoc deals made within [=AHLD=]. A 
+          search engine may impose additional requirements on browser vendors that might not be in users' best interests 
+          (e.g. that the browser must not implement certain privacy protections) without oversight. A system deployed at
+          such a scale needs to be trustworthy.
+        </p>
+        <p>
+          Browsers are paid by the [=AHLD=] levy and may be subject to private requirements imposed by search engines, but 
+          from the perspective of the web community <strong>no requirements are placed on browsers</strong> in
+          exchange for benefitting from the system.
+        </p>
+        <p>
+          The levy system pays for browsers but <strong>it does not pay for browser engines</strong>. [=Browser engines=]
+          are the more complicated component and ought to be supported directly. As things stand, a [=browser=] can use 
+          an open source [=browser engine=], collect funds from the levy, but not contribute anything back to the
+          browser engine. This free riding is detrimental to the maintenance of a rich ecosystem of browser engines.
+        </p>
+        <p>
+          Worryingly, <strong>most appropriated funds don't go towards web infrastructure</strong>. While the purpose of 
+          the levy is manifestly to support web infrastructure, the overwhelming majority of funds is directed elsewhere.
+          To take but one example: based on 2021 numbers, of the $26 billion USD that Google Search paid in levy, $18
+          billion went to Apple (about 70%). There is scant evidence that Apple, a publicly-traded company, spends in 
+          the vicinity of $18 billion USD per year on web infrastructure. The levy therefore suffers from very low
+          efficiency, and in turn this causes value produced on the web to be directed outside of the web, which 
+          subsidizes its proprietary competitors.
+        </p>
+        <p>
+          The logic of applying a web infrastructure levy on search is because search can be considered to distill the 
+          value produced by publishers, ecommerce sites, and content creators. Unfortunately, <strong>publishers, 
+          ecommerce sites, and content creators have no say in a system eventually build on their work</strong>.
+          While indexing content for the purpose of providing links back to the original source is evidently in 
+          everyone's interest, the lack of checks and balances in the system has led to a race to the bottom in 
+          which search engines provide fewer-and-fewer links back to sources ([[?AMP]]) while increasing the number 
+          of non-linking purposes for which they process the indexed content, such as generative AI.
+        </p>
+        <p>
+          Last but not least, the manner in which the [=AHLD=] system is structured means that <strong>it mechanically
+          increases concentration in the search market</strong>. Few people change their default search engine (particularly
+          on mobile devices), which means that purchasing a [=default placement=] effectively purchases market share.
+          In turn, the search engine with the highest market share has greater profits from which to pay a higher 
+          price for further [=default placements=]. This eventually leads to almost every browser defaulting to the 
+          same search engine, and that search engine dominating the web by insuperable margins. In turn, this 
+          artificially-crated and -sustained concentration creates further problems:
+        </p>
+        <ul>
+          <li>
+            <strong>Decreasing search quality</strong>. It is both much easier and far more valuable for sites to optimize
+            for a single ranking function that changes occasionally than for many different ones that evolve in different
+            directions. This makes signals of content quality easier to fake, thereby empowering low-quality sites to
+            rate higher. The decrease in search quality ([[?Bad-Search]]) and the effect of search monoculture on the web 
+            ([[?Perfect-Webpage]]) are well-documented.
+          </li>
+          <li>
+            <strong>Higher misinformation</strong>. As signals of quality lose their value, it becomes increasingly easier 
+            for misinformation to weave its way into search results.
+          </li>
+          <li>
+            <strong>Loss of pluralism</strong>. A search engine defines an editorial policy: like newspapers or TV channels
+            before it, it determines what is and isn't relevant. The modality differs in that the editorial policy is 
+            applied on demand and automatically, but it is no different from and no less subjective than that set by other 
+            forms of media. Having close to a single editorial policy for the entire web eliminates media pluralism, which 
+            has negative impacts on society and democracy, and leads to privatized censorship.
+          </li>
+          <li>
+            <strong>One company pays for all browsers</strong>. Every major [=browser engine=] and [=browsers=] accounting
+            for at least 90% of the market are all paid for by one single search engine. Without ascribing malice or asserting
+            misbehavior, this level of privatized control over critical infrastructure is incompatible with a free and 
+            equal Internet.
+          </li>
+        </ul>
+        <p>
+          While it is necessary to take stock of the [=AHLD=]'s shortcomings, and while having left it to linger too long in 
+          outdated ad hoc arrangements has caused these shortcomings to fester, these problems, once identified, can be
+          addressed. The web community has a responsibility to do so quickly and effectively, as well as durably.
         </p>
       </section>
     </section>
     <section>
-      <h2>Required Properties</h2>
+      <h2>Requirements for a <em>Web Infrastructure Search Endowment (WISE)</em></h2>
       <p>
         tk
+        MAKE THIS JUST REQUIREMENTS
       </p>
-      <section>
-        <h2>Choice Dialogs</h2>
-        <p>
-          tk
-        </p>
-      </section>
-    </section>
-    <section>
-      <h2>The <em>Web Infrastructure Search Endowment (WISE)</em></h2>
-      <p>
-        tk
-      </p>
+      <!-- 
+        - transparency
+        - publishers represented
+        - funding structure
+        - earmarks for engines
+        - multihoming
+        - verticals
+        - fiduciary duties
+       -->
       <section>
         <h2>Operational Outline of the Web Fund</h2>
         <p>
@@ -195,7 +309,14 @@
         </p>
       </section>
     </section>
-    <section>
+    <section class="appendix">
+      <h2>Notes on Choice Dialogs</h2>
+      <p>
+        tk simply show how they fail to meet requirements at a satisfactory level
+        lots of testimony from Apple and Mozilla (cite transcripts) that they aren't user-friendly
+      </p>
+    </section>
+    <section class="appendix">
       <h2>Acknowledgements</h2>
       <p>
         The following people (in alphabetical order) have provided invaluable input into this draft:
