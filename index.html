@@ -42,6 +42,16 @@
         edDraftURI: 'https://darobin.github.io/wise/',
         shortName: 'wise',
         localBiblio: {
+          '26-Billion-Default': {
+            title: 'Google paid a whopping $26.3 billion in 2021 to be the default search engine everywhere',
+            href: 'https://www.theverge.com/2023/10/27/23934961/google-antitrust-trial-defaults-search-deal-26-3-billion',
+            authors: ['David Pierce'],
+          },
+          'Apple-36': {
+            title: 'Apple Gets 36% of Google Revenue in Search Deal, Expert Says',
+            href: 'https://www.bloomberg.com/news/articles/2023-11-13/apple-gets-36-of-google-revenue-from-search-deal-witness-says',
+            authors: ['Leah Nylen'],
+          },
           'Fiduciary-UA': {
             title: 'The Fiduciary Duties of User Agents',
             href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3827421',
@@ -51,6 +61,11 @@
             title: 'Individuals using the Internet (% of population)',
             href: 'https://data.worldbank.org/indicator/it.net.user.zs?end=2022&start=1960&view=chart',
             authors: ['International Telecommunication Union ( ITU ) World Telecommunication/ICT Indicators Database (via The World Bank)'],
+          },
+          'Mozilla-Revenue': {
+            title: 'Mozilla expects to generate more than $500M in revenue this year',
+            href: 'https://techcrunch.com/2021/12/13/mozilla-expects-to-generate-more-than-500m-in-revenue-this-year/',
+            authors: ['Frederic Lardinois'],
           },
           'Where-Browsers': {
             title: 'Where Browsers Come From',
@@ -96,8 +111,8 @@
       <p>
         In order to assemble the funds required to operate, almost all browser vendors rely on variations on the 
         same strategy: they exercise an ad hoc levy on search engine revenue. Variations on this levy include
-        selling the search engine default (the initial and typical approach), royalties on search volume,
-        or intra-company transfers (when the search engine and browser belong to the same company). Taken
+        selling the search engine [=default=] (the initial and typical approach), [=royalties=] on search volume,
+        or [=intra-company transfers=] (when the search engine and browser belong to the same company). Taken
         together, these strategies form the [=AHLD=] system, which is described further in the next section.
       </p>
       <p>
@@ -111,11 +126,47 @@
     <section>
       <h2>The <em>Ad Hoc Levy on Defaults (AHLD)</em> System</h2>
       <p>
-        The <dfn data-lt="AHLD">Ad Hoc Levy on Defaults</dfn> (AHLD) system is… TKTKTK
+        The <dfn data-lt="AHLD">Ad Hoc Levy on Defaults</dfn> (AHLD) is a system in which a portion of search engine
+        revenue is levied and used to pay browsers. (It is also used for operating systems and other agents, but our
+        focus in this document is browsers.) The levy ensures that browsers, which constitute criticial infrastructure
+        for the web, are provided free of charge to people. It can take multiple typical forms:
+      </p>
+      <ul>
+        <li>
+          <dfn data-lt="default">Default placement</dfn>: the browser vendor sells its default search function to a 
+          search engine. Defaults have an outsized impact on search volume as few users change them.
+        </li>
+        <li>
+          <dfn>Royalties</dfn>: the browser vendor gets a share of the revenue when directing traffic to a given search 
+          engine.
+        </li>
+        <li>
+          <dfn>Intra-company transfers</dfn>: the browser vendor and search engine vendor are the same company, and
+          revenue from the latter contributes to paying for the former. In effect, this is a horizontally
+          integrated variant of [=default placements=] that is cheaper and of greater strategic value. (For smaller
+          search engines, it may also be the only deal they can make.)
+        </li>
+      </ul>
+      <p>
+        These deals are negotiated bilaterally, and in practice an [=AHLD=] agreement between a browser vendor and 
+        a search engine vendor can marry aspects from several of these forms.
+      </p>
+      <p>
+        [=AHLD=] levies are economically significant and constitute one of the larger commercial exchanges on the 
+        web. For instance, in the year 2021 Google Search spent over $26 billion USD on [=default placement=] deals 
+        ([[?26-Billion-Default]]) — which does not include its [=intra-company transfer=] costs — and paid 36% of 
+        its search advertising revenue made in Safari to Apple ([[?Apple-36]]). In 2020, Mozilla made 86% of its 
+        revenue from the Google Search levy ([[?Mozilla-Revenue]]). <span class="note">Note: We have to use relatively 
+        old numbers due to the unfortunate lack of transparency that the [=AHLD=] system suffers from. To the best
+        of our knowledge, the situation has not significantly evolved since.</span>
       </p>
       <section>
         <h2>Known Issues</h2>
         <p>
+          this levy is good but it has issues
+          one concern is that, if we don't address the issues, we will lose the levy and that will make it very hard to pay for browsers
+          we need to act
+          unfortunately limited transparency, despite being the beating heart of web infrastructure -> issues
           tk
         </p>
       </section>
@@ -138,11 +189,21 @@
         tk
       </p>
       <section>
-        <h2>Operation Outline of the Web Fund</h2>
+        <h2>Operational Outline of the Web Fund</h2>
         <p>
           tk
         </p>
       </section>
     </section>
-  </body>
+    <section>
+      <h2>Acknowledgements</h2>
+      <p>
+        The following people (in alphabetical order) have provided invaluable input into this draft:
+        Dietrich Ayala,
+        Matthew Frehlich,
+        and
+        Max Gendler.
+      </p>
+    </section>
+</body>
 </html>
