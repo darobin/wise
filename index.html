@@ -150,7 +150,9 @@
       <ul>
         <li>
           <dfn data-lt="default">Default placement</dfn>: the browser vendor sells its default search function to a 
-          search engine. Defaults have an outsized impact on search volume as few users change them.
+          search engine. Defaults have an outsized impact on search volume as few users change them. This practice
+          also includes selling a presence (that isn't the default position) on the list of search engine alternatives
+          that browsers provide.
         </li>
         <li>
           <dfn>Royalties</dfn>: the browser vendor gets a share of the revenue when directing traffic to a given search 
@@ -215,6 +217,23 @@
           search engine may impose additional requirements on browser vendors that might not be in users' best interests 
           (e.g. that the browser must not implement certain privacy protections) without oversight. A system deployed at
           such a scale needs to be trustworthy.
+        </p>
+        <p>
+          It <strong>does not respect the priority of constituencies</strong> ([[?ethical-web-principles]]). Search deals 
+          made via the levy can have terms that forbid the browser from intervening on the search engine results page 
+          (SERP) even when such changes would be beneficial to the user. For instance, a search engine may benefit from
+          making its ads look like search results or from pushing users to be logged in, sacrificing privacy. A browser 
+          is expected to counteract such practices, but the [=AHLD=] levy prevents that.
+        </p>
+        <p>
+          The system <strong>gives power to search engines over how browsers work</strong>, including over aspects of 
+          browsers that may not seem search-related, for instance privacy features that can be used for advertising
+          attribution may have to be approved by the search engine before they can ship in a browser. The lack of 
+          public accountability over the royalties part of the system means that there is a strong information
+          asymmetry between the search engine and the browser in terms of where the royalties come from and what may
+          affect them, which empowers the search engine to threaten potential revenue loss when the browser makes a 
+          change they dislike in ways that cannot be verified. Because of this, <strong>the search engine is both judge
+          and party</strong> in the relationship, and in a position to exert undue influence over browsers.
         </p>
         <p>
           Browsers are paid by the [=AHLD=] levy and may be subject to private requirements imposed by search engines, but 
@@ -294,6 +313,7 @@
         MAKE THIS JUST REQUIREMENTS
       </p>
       <!-- 
+        - make sure this is a theory of change
         - transparency
         - publishers represented
         - funding structure
@@ -301,6 +321,10 @@
         - multihoming
         - verticals
         - fiduciary duties
+        - auditability of revenue
+        - respect for the Priority
+        - (go though issues to make this list)
+        - driving towards search pluralism
        -->
       <section>
         <h2>Operational Outline of the Web Fund</h2>
